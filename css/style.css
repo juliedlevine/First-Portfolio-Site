@@ -1,0 +1,302 @@
+* {
+	font-family: 'Lato', sans-serif;
+}
+
+
+
+/****************************
+NAVIGATION STYLES
+****************************/
+.nav ul {
+    margin-top: 0;
+    text-align: center;
+    background: #343738;
+}
+/*navigation list-margin to make it flush with the top.
+color sets the background behind the buttons (light black)*/
+
+.nav li {
+	display: inline-block;
+    margin-left: -5px;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    background: #E3E4E8;
+}
+/*list items-display inline block to have them along side each other.
+negative margin to remove space between the buttons.
+color sets the gray color on the unclicked buttons*/
+
+.nav li a {
+	display: block;
+	padding: 30px;
+	text-decoration: none;
+	color: black;
+}
+/* links-display block for links makes them take up the whole space of the li
+and also be able to accept margin and padding properties.
+padding effectively sets the size of the buttons.
+text decoration and color removes the blue underline from a typical link.*/
+
+.nav li:hover,
+.selected {
+    background-color: white;
+    transition-duration: 1s;
+ }
+ /*Changes links to white when they are hovered.
+ Also slows down the transition so it takes some time
+ to change from gray to white. And changes selected page
+ link to white*/
+
+
+
+/**********************************
+MAIN STYLES - LOGO and PHOTO
+**********************************/
+.main {
+	height: 500px;
+}
+/*sets height of the main white area w/ photo*/
+
+#logo {
+	display: block;
+	margin: 60px auto;
+}
+/*styling for name logo above photo. Margin moves it away from
+the navigation bar a bit. It is actually an image so must
+use display block to add margins.*/
+
+#logoStacked {
+	visibility: hidden;
+	display: none;
+}
+/*Hide stacked name logo on larger screen sizes. will
+change in Media query*/
+
+#photo {
+	display: block;
+	margin: 40px auto;
+	width: 250px;
+	border-radius: 5%;
+	opacity: 0.8;
+}
+/*image styling. display and margin to center it on the page with some
+top and bottom margin. width sets the size of the image*/
+
+.main h3 {
+	margin-top: 70px;
+	padding: 0 15px;
+	text-align: center;
+	letter-spacing: 0.25em;
+	text-transform: uppercase;
+}
+/*styling for text under photo. Margin to move it away
+from the image a bit. Padding left and right makes the logo drop
+to 2 line as screen sizes get smaller*/
+
+.secondary {
+	height: 220px;
+}
+/* Change height of About Me and Contact main pages to accomodate
+for removing the image*/
+
+.secondary h3 {
+	margin-top: 40px;
+}
+/*move text under name logo up to make it more centered on the About Me
+and Contact pages. Changed from 70px to 40px*/
+
+
+
+/**********************************
+CONTENT STYLES
+**********************************/
+.wrapper {
+	color: white;
+	background-color: #343738;
+	min-height: 400px;
+}
+/*background color and font color for content section.
+Keeping it as a separate wrapped div makes it take up the width
+of the webpage*/
+
+.content {
+	margin: 0 auto;
+	padding: 60px;
+	max-width: 800px;
+	overflow: auto;
+	font-size: 1.1em;
+	line-height: 1.8em;
+	opacity: 0.9;
+}
+/*styling for content inside black box. margin centers and padding
+makes gives some space around the edges. max-width makes it not go further
+than 800px when the browser is expanded. Overflow: auto keeps the height from
+collapsing on floated items*/
+
+.bold {
+	font-weight: 700;
+	color: #CCB6BA;
+}
+/*styling for About Me page questions and link*/
+
+
+
+
+/**********************************
+CONTACT PAGE STYLES
+**********************************/
+.contact-page {
+	overflow: hidden;
+	padding-top: 50px;
+	width: 600px;
+	margin: 0 auto;
+}
+.contact {
+	float: left;
+	width: 150px;
+	opacity: 0.9;
+}
+
+.form {
+	float: right;
+	width: 415px;
+}
+
+@media (max-width: 622px) {
+	.contact-page {
+		width: 100%;
+	}
+	.contact, .form {
+		float: none;
+		margin: 20px auto;
+	}
+}
+
+.contact a {
+	text-decoration: none;
+	color: #fff;
+}
+
+.contact h3 {
+	letter-spacing: 0.2em;
+}
+
+.form label>span {
+    float: left;
+    width: 20%;
+    text-align: right;
+    padding: 5px 10px 0px 0px;
+    color: white;
+}
+.form input[type="text"], .form input[type="email"], .form textarea {
+    border: 1px solid #DADADA;
+    height: 30px;
+    margin: 2px 6px 16px 0px;
+    padding: 3px 3px 3px 5px;
+    width: 300px;
+}
+.form textarea{
+    padding: 5px 3px 3px 5px;
+    height:100px;
+}
+.form textarea:focus, .form input:focus, input, textarea {
+	color: black;
+}
+.form .button {
+    background: white;
+    color: black;
+    border: none;
+    padding: 10px 25px 10px 25px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+.form .button:hover {
+    background: #E3E4E8;
+}
+
+
+
+/**********************************
+PORTFOLIO STYLES
+**********************************/
+
+.portfolio {
+	max-width: 900px;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.portfolio img {
+	width: 100%
+}
+
+.project {
+	display: inline-block;
+    width: 300px;
+    height: 300px;
+    overflow: hidden;
+    border: 10px solid white;
+	margin: 5px;
+}
+
+
+
+
+
+/**********************************
+FOOTER STYLES
+**********************************/
+.icon {
+	display: inline;
+	margin-left: 10px;
+	padding: 25px 0px 25px;
+	width: 60px;
+	height: auto;
+}
+/*Styling for social media links. Inline displays them alongside each other
+instead of stacked. margin adds some space between each icon and also the
+left side of the browser. padding adds some space above and below*/
+
+
+
+/**********************************
+MEDIA QUERIES
+**********************************/
+@media (max-width: 515px) {
+	.nav ul {
+		padding: 0;
+	}
+	/*makes the buttons flush to the left of the browser*/
+
+	.nav li,
+	.nav li a {
+		display: block;
+	}
+	/*makes buttons stack on top of each other and take up
+	the width of the browser*/
+
+	#logo {
+		visibility: hidden;
+		display: none;
+	}
+	/*hide the horizontal logo.*/
+
+	#logoStacked {
+		visibility: visible;
+		display: block;
+		margin: 40px auto;
+	}
+	/*Show new stacked logo for smaller screens*/
+
+	.main h3 {
+		margin-top: -10px;
+	}
+	/*Center text under photo*/
+
+	.content {
+		padding: 25px;
+	}
+	/*makes padding around content a little smaller so there is more
+	room for text on a smaller screen*/
+
+}
