@@ -1,3 +1,5 @@
+/* New stylesheet 2/12/17 */
+
 * {
 	font-family: 'Lato', sans-serif;
 }
@@ -262,15 +264,20 @@ left side of the browser. padding adds some space above and below*/
 /**********************************
 MEDIA QUERIES
 **********************************/
-@media (max-width: 515px) {
+@media (max-width: 560px) {
 	.nav ul {
+		width: 100%;
 		padding: 0;
 	}
 	/*makes the buttons flush to the left of the browser*/
 
-	.nav li,
+	.nav li {
+		font-size: 14px;	
+		width: 34%;
+	}
 	.nav li a {
-		display: block;
+		padding: 30px 10px;
+
 	}
 	/*makes buttons stack on top of each other and take up
 	the width of the browser*/
