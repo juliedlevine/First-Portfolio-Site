@@ -220,9 +220,10 @@ PORTFOLIO STYLES
 **********************************/
 
 .portfolio {
-	max-width: 900px;
+	max-width: 1000px;
 	margin: 0 auto;
 	text-align: center;
+	padding: 50px;
 }
 
 .portfolio img {
@@ -243,6 +244,7 @@ PORTFOLIO STYLES
 	height: 100%;
 	z-index: 200;
 	transition: all 0.7s ease;
+	padding-top: 40px
 }
 
 .project:hover .overlay {
