@@ -136,7 +136,9 @@ makes gives some space around the edges. max-width makes it not go further
 than 800px when the browser is expanded. Overflow: auto keeps the height from
 collapsing on floated items*/
 
-
+.video {
+	text-align: center
+}
 
 
 /**********************************
